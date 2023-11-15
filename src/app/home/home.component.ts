@@ -21,8 +21,6 @@ export class HomeComponent {
   protected planets = signal<Planet[]>([])
 
   protected ratio = computed( () => {
-    console.log('****** computing ', this.distancePlanet() )
-
     let ratio = 1
 
     const terre = this.planets().find(p => p.name === 'Terre')
