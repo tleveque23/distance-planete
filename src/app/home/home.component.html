@@ -1,7 +1,7 @@
 <div class="title">{{'global.title' | transloco}}</div>
 
 @if (planets().length > 0 ) {
-<form (formValueChange)="distancePlanet.set($event)">
+<form (formValueChange)="updateForm($event)">
   <div class="p-3">
     <h2>{{ 'global.echelle-label' | transloco }}</h2>
 

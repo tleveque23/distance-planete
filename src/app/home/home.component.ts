@@ -124,9 +124,11 @@ export class HomeComponent {
     return cm / 100 / 1000
   }
 
-  /*updateForm($event: PlanetDistanceModel) {
-    console.log('***** event: ', $event)
-    $event.planets = this.distancePlanet().planets
-    this.distancePlanet.update(dp => $event)
-  }*/
+  updateForm(event: PlanetDistanceModel) {
+    this.distancePlanet.update(dp => {
+      return {
+        ...dp, ...event
+      }
+    })
+  }
 }
