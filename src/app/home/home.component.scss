@@ -1,0 +1,12 @@
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+}
+
+:host ::ng-deep {
+  .p-slider-horizontal {
+    width: 15rem;
+  }
+}

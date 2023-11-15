@@ -1,0 +1,46 @@
+<div class="title">{{'global.title' | transloco}}</div>
+
+@if (planets().length > 0 ) {
+<form (formValueChange)="distancePlanet.set($event)">
+  <div class="p-3">
+    <h2>{{ 'global.echelle-label' | transloco }}</h2>
+
+    <div class="mt-2">
+      <label for="echelle" class="mr-1">{{ 'global.echelle-echelle' | transloco }}</label>
+      <p-radioButton name="echelle" id="echelle" value="echelle" [ngModel]="distancePlanet().echelle"
+                     inputId="echelle"></p-radioButton>
+
+      <label for="echelle" class="ml-2 mr-1">{{ 'global.echelle-reelle' | transloco }}</label>
+      <p-radioButton name="echelle" id="echelle-reelle" value="reelle" [ngModel]="distancePlanet().echelle"
+                     inputId="echelle-reelle"></p-radioButton>
+    </div>
+
+    <div class="mt-2 grid">
+      <div class="col-fixed">
+        <label for="tailleTerre" class="mr-2">{{ 'global.taille-terre-lbl' | transloco }}</label>
+      </div>
+      <div class="col-fixed mt-1">
+        <p-slider id="tailleTerre" [ngModel]="distancePlanet().tailleTerre" name="tailleTerre" [min]="0.1" [max]="10"
+                  [step]="0.1" [disabled]="distancePlanet().echelle === 'reelle'"></p-slider>
+      </div>
+      <div class="col">{{ distancePlanet().tailleTerre }}cm</div>
+    </div>
+    <div>Echelle: 1 / {{ ratio() | number }}</div>
+
+  </div>
+
+  <div>
+    @for (planet of planets(); track planet.position) {
+      <div class="mt-2">Nom: <strong>{{ planet.name }}</strong></div>
+      <div>Diamètre: {{ planet.diameter | number }} km. Calculé: {{planet.diameterCalculated | number:'1.2-2'}} cm</div>
+      @if (planet.distanceFromSun !== 0 ) {
+        <div>Distance: {{ planet.distanceFromSun | number }} km. Calculé: {{planet.distanceFromSunCalculated | number:'1.2-2'}} m</div>
+      }
+    }
+  </div>
+</form>
+
+<!--<pre>{{distancePlanet() | json}}</pre>-->
+}
+
+<!--<pre>{{planets() | json}}</pre>-->
