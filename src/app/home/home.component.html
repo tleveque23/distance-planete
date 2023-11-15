@@ -25,14 +25,14 @@
       </div>
       <div class="col">{{ distancePlanet().tailleTerre }}cm</div>
     </div>
-    <div>Echelle: 1 / {{ ratio() | number }}</div>
+    <div>{{ 'global.echelle' | transloco }}: 1 / {{ ratio() | number }}</div>
 
   </div>
 
   <div>
     @for (planet of planets(); track planet.position) {
-      <div class="mt-2">Nom: <strong>{{ planet.name }}</strong></div>
-      <div>Diamètre: {{ planet.diameter | number }} km. Calculé: {{planet.diameterCalculated | number:'1.2-2'}} cm</div>
+      <div class="mt-2">{{'global.name' | transloco}}: <strong>{{ planet.name }}</strong></div>
+      <div>{{'global.diameter' | transloco}}: {{ planet.diameter | number }} km. {{'global.calculated' | transloco}}: {{planet.diameterCalculated | number:'1.2-2'}} cm</div>
       @if (planet.distanceFromSun !== 0 ) {
         <div>Distance: {{ planet.distanceFromSun | number }} km. Calculé: {{planet.distanceFromSunCalculated | number:'1.2-2'}} m</div>
       }

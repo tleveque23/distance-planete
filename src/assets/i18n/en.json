@@ -1,7 +1,13 @@
 {
-  "global.title": "***MISSING***",
-  "global.echelle-label": "***MISSING***",
-  "global.echelle-echelle": "***MISSING***",
-  "global.echelle-reelle": "***MISSING***",
-  "global.taille-terre-lbl": "***MISSING***"
+  "global": {
+    "echelle": "Scale",
+    "title": "Planets distances",
+    "echelle-label": "Scalled solar system",
+    "echelle-echelle": "At scale",
+    "echelle-reelle": "Real size",
+    "taille-terre-lbl": "Size of the Earth in cm",
+    "diameter": "Diameter",
+    "calculated": "Calculated",
+    "name": "Name"
+  }
 }

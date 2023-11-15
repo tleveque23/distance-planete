@@ -1,7 +1,13 @@
 {
-  "global.title": "Distance des planètes",
-  "global.echelle-label": "Système solaire à l'échelle",
-  "global.echelle-echelle": "À l'échelle",
-  "global.echelle-reelle": "Taille réelle",
-  "global.taille-terre-lbl": "Taille de la terre en cm"
+  "global": {
+    "echelle": "Echelle",
+    "title": "Distance des planètes",
+    "echelle-label": "Système solaire à l'échelle",
+    "echelle-echelle": "À l'échelle",
+    "echelle-reelle": "Taille réelle",
+    "taille-terre-lbl": "Taille de la terre en cm",
+    "diameter": "Diamètre",
+    "calculated": "Calculé",
+    "name": "Nom"
+  }
 }
